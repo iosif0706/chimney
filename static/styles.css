@@ -267,6 +267,9 @@ img {
         margin-left: 1px;
 
     }
+    .navbar {
+        width: 250px;
+    }
 }
 @media (max-width:300px) {
     iframe {
