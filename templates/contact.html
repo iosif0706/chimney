@@ -1,0 +1,46 @@
+
+      
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+<form action="/contact" method="post">
+<div class="email" >
+  <br>
+  <p>Trimite un mesaj</p>
+  <p>Îți suntem zilnic aproape cu gustul și vorba bună. Contactează-ne dacă vrei să ne împărtășești experiența ta cu produsele Chimney Delices sau dacă ai nevoie de informații suplimentare de la noi.</p>
+  <p>Dacă ai nevoie de informații suplimentare, trimite un mesaj, folosind formularul de mai jos. În cel mai scurt timp, vei primi un mesaj de la Chimney Delices.</p>
+</div>
+<div class="email" >
+      <p style="font-size: 35px; font-family:cursive;" >CONTACTEAZĂ-NE</p>
+
+      <ul class="singin">
+        {% for x in nume %}
+        <li class="contact" >
+          {{x.nume}}
+          {{x.prenume}}
+          
+         
+        </li>
+        {% endfor %}
+        <br>
+        <li>
+          <p>{{phone_error}}</p>
+        </li>
+        <li>
+          <input name="telefon" type="text"  placeholder="Telefon">
+          
+          <input name="oras" type="text"  placeholder="City"><br>
+          <p> {{msg_error}}</p>
+          <textarea name="mesaj" rows="4" cols="42"></textarea>
+        
+        </li>
+        <br>
+        <li class="inregistreaza"> <button href="/contact" >Timite</button></li>
+      </ul>   
+
+</form>
+{% endblock %}

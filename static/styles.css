@@ -1,0 +1,276 @@
+
+.header {
+    background-color:black;
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    
+   
+
+}
+h1 {
+    font-size: 75px;
+    font-family:cursive;
+    color:whit;
+}
+.login a{
+    float:right ;
+    text-align: center;
+    width: 90px;
+    height: 30px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;  
+    padding-top: 4px;
+    
+}
+.login a:hover {
+    background-color: white;
+    color: black;
+
+}
+
+.navbar {
+    background-color:transparent;
+    overflow: hidden;
+    max-width: 500px;
+    top: 60%;
+
+}
+
+
+.navbar a {
+    margin-left: 5px;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 4px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family:Arial, Helvetica, sans-serif
+}
+.navbar a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+.navbar .active {
+    background-color: whitesmoke;
+    color: black;
+}
+ul {
+    list-style: none;
+}
+img {
+    max-width: auto;
+    max-height: auto;
+}
+.text {
+   display:inline-block;
+   display: flex;
+   min-width: 300px;
+   
+   
+
+}
+
+.email {
+    text-align: center;
+}
+.password {
+    text-align: center;
+    margin-right: 30px;
+    margin-top:5px;
+}
+.inregistreaza {
+    text-align: auto;
+}
+.inregistreaza button{
+
+    background-color: rgb(84, 80, 80);
+    color: white;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color:white;
+    opacity:1;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.inregistreaza button:hover {
+    opacity: 0.4;
+}
+.singin {
+    text-align: center;
+    list-style: none;
+}
+.singin p {
+    color: red;
+    
+}
+.container {
+    
+    text-align: center;
+    margin-left: 5px;
+    
+  }
+.container tr {
+    
+    display:flex;
+    flex-wrap: wrap;
+   
+   
+  }
+
+.container img {
+    margin: 30px;
+    max-height: 300px;
+    display: block;
+
+ 
+
+}
+.login {
+    text-align: center;
+    list-style: none;
+}
+.login p {
+    color: red;
+}
+.contact { 
+    font-size: 30px;
+    font-family:cursive;
+    color:rgb(147, 152, 151);
+
+}
+.change p{
+    text-align: center;
+    font-size: 30px;
+}
+.change table{
+    margin-left: 40px;
+   }
+.hide {
+    display: none;
+}
+.profil input{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.profil button{
+    background-color: black;
+    color: #f2f2f2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+}
+.kurtocs {
+    margin-left: 80px;
+    margin-top: 40px;
+    flex-wrap: wrap;  
+}
+.kurtocs img {
+    height: 350px;
+    margin-top: 30px;
+}
+
+
+.myTable {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    border-collapse: collapse;
+    width: 98%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    display: none;
+   
+}
+  
+.myTable th, .myTable td {
+    text-align: left;
+    padding: 12px;
+    width: 96%;
+}
+  
+.myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+  
+.myTable tr.header, .myTable tr:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+.error_msg  {
+    text-align: left;
+    color: red;
+    margin-left: 30px;
+}
+.image_font {
+    position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.image_font img {
+    vertical-align: middle;
+    width: 100%;
+}
+.image_font .content {
+    position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+@media (max-width:414px) {
+    .inregistreaza {
+    
+    margin-right: 0px;
+    }
+    .password {
+        margin-right: 0px;
+    }
+    img {
+        height: auto;
+        width: 200px;
+    }
+    .singin {
+        padding: 5px;
+        text-align: left;
+    }
+    textarea {
+        width: 250px;
+    }
+    .myTable {
+       width: 300px;
+       font-size: 13px;
+    
+    }
+    .text {
+        display: block;
+    }
+    iframe {
+        width: 250px;
+       
+    }
+}
+@media (max-width:300px) {
+    iframe {
+        width: 200px;
+    }
+    .header {
+       width: 300px;
+    }
+    .myTable {
+        margin-left: 2px;
+        width: 260px;
+    }
+}
+
+

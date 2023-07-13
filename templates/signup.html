@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign in
+{% endblock %}
+
+{% block main %}
+
+<form  action="/register" method="post">
+
+    <div class="singin" >
+    <br>
+    <h1 style="margin-left:20px;"> Sing in</h1>
+    <br>
+    <ul >
+            <br>
+            <li>
+                <input type="text" name="email" placeholder="Email Adress">
+                <p>{{email}}</p>
+            </li>
+            <li style="margin-left:135px;">
+                <input type="password" id="pass" name="password" placeholder="Password"> 
+                <input type="checkbox" onclick="hide()" >Show Password
+                <p>{{error}}</p>
+            </li>
+        
+            <li style="margin-left:135px;">
+                <input type="password" id="cpass" name="cpass" placeholder="Confirm Password">
+                <input type="checkbox" onclick="hidec()" >Show Password
+                <p>{{confpass}}</p>
+            </li>
+            <li>
+                <input type="text"  name="fname" placeholder="First Name">
+                <p>{{fname_error}}</p>
+            </li>
+            <li>
+                <input type="text" name="lname"  placeholder="Last Name">
+                {{lname_error}}
+            </li>
+            <br>
+            <li>
+                <input type="text" name="adress" placeholder="Adress">
+                <p>{{adress_error}}</p>
+            </li>
+            <li>
+                <input  type="number" name="postcode"  placeholder="Zip/Post Code">
+                <p>{{postcode_error}}</p>
+            </li>
+            
+            <li>
+                <label>Your birtday</label><br>
+                <input type="date"  name="birthday">
+                <p>{{birthday_error}}</p>
+            </li>
+            <li class="inregistreaza"><button type="submit" href="/register">Sign Up</button></li>
+        </ul>
+            
+    </div>
+  
+</form>
+{% endblock %}

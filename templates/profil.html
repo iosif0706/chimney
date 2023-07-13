@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profil
+{% endblock %}
+
+{% block main %}
+
+<div class="change">
+    <br>
+    {% for x in profil %}
+    <p style="text-align: center;">Welcome {{x.nume}} {{x.prenume}}</p>
+    {% endfor %}
+    <ul class="profil">
+     
+        <form action="/changepass" method="post">
+            <li>
+    
+                <button type="button" onclick="hide_password()">Change Password</button>
+                <li class="hide" id="hide" >
+                    <input name="curent_pass" placeholder="Curent Password">
+                    <input name="confirm_pass" placeholder="New Password">
+                    <input name="reconfirm_pass" placeholder="Confirm Password">
+                    <button>Submit</button> 
+                </li>
+               
+            </li>
+        </form>
+        
+        <form action="/changename" method="post" >
+            <li>
+                <button type="button" onclick="hide_name()">Change Name</button>
+                <li  class="hide" id="hide_name">
+                    <input name="first_name" placeholder="First Name">
+                    <input name="last_name" placeholder="Last Name">
+                    <button>Submit</button>
+                </li>
+                       
+            </li>
+
+        </form>
+
+
+        <li >
+            <button type="button" onclick="hide_history()">History</button>
+        </li>
+             
+    </ul>
+  </div>
+
+</li>
+<form action="/profil" method="get"></form>
+    <table class="myTable" id="myTable">
+
+        <thead>
+            <tr>
+                <th>history</td>
+                <th>date</td>
+            </tr>
+       
+        </thead>
+  
+        <tbody>
+            {% for y in mesaj %} 
+            <tr >
+            <td>{{y.mesaj}} </td>
+            <td class="text-end">{{y.date}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+    <p class="error_msg">{{error}}</p>
+</form>
+{% endblock %}

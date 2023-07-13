@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Messages
+{% endblock %}
+
+{% block main %}
+
+<table  class="myTable" style="display: block;">
+    
+    <thead>
+        <tr>
+            <th class="text-start">Mesaj</th>
+            <th class="text-start">Email</th>
+            <th class="text-start">Telefon</th>
+            <th class="text-end">Nume</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+   
+    <tbody>
+        {% for x in check %}
+        <tr>
+            <td class="text-start" > {{x.mesaj}}</td>
+            <td class="text-start">{{x.email}}</td>
+            <td class="text-start">{{x.telefon}}</td>
+            <td class="text-start">{{x.nume}}</td>
+            <td>{{x.date}}</td>
+        </tr>   
+    </tbody>
+    {% endfor %}
+</table>
+
+
+
+
+{% endblock %}

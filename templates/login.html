@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log in
+{% endblock %}
+
+{% block main %}
+<form  action="/login" method="post">
+
+    {% if get_flashed_messages() %}
+    <header>
+        <div class="alert alert-primary mb-0 text-center" role="alert">
+            {{ get_flashed_messages() | join(" ") }}
+        </div>
+    </header>
+    {% endif %}
+    <br>
+    <div class="login" >
+        <h1 style="margin-left:20px;"> Sing in</h1>
+        <br>
+            <ul >
+                <li>
+                    <input type="email" name="email" placeholder="Email Adress">
+                    <p>{{error}}</p>
+                </li>
+                <li>
+                    <input type="password" id="cpass" name="password" placeholder="Password"><br>
+                    <input type="checkbox" onclick="hidec()" >Show Password
+                    <p>{{pass_err}}</p>
+                </li>
+                <p>{{msg}}</p>
+                <li class="inregistreaza">
+                    <button  type="submit" href="/login" >Log In</button>
+                </li>
+            </ul>
+            
+    </div>
+
+   
+
+
+</form>
+{% endblock %}
