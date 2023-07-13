@@ -243,6 +243,7 @@ img {
     .singin {
         padding: 5px;
         text-align: left;
+        margin-left: 30px;
     }
     textarea {
         width: 250px;
